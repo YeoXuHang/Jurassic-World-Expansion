@@ -50,10 +50,7 @@ public class JweMod
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
-    @SubscribeEvent
-    public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
-        event.registerLayerDefinition(TyrannosaurusRexModel.LAYER_LOCATION, TyrannosaurusRexModel::createBodyLayer);
-    }
+
     private void clientSetup(final FMLClientSetupEvent event) {
 
         EntityRenderers.register(JweModEntityTypes.T_REX.get(), TyrannosaurusRexRenderer::new);
