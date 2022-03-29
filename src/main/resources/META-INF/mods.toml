@@ -1,0 +1,24 @@
+modLoader="javafml"
+loaderVersion="[40,)"
+license="All rights reserved"
+[[mods]]
+modId="jwe"
+version="1.0.0"
+displayName="Jurassic World Expansion"
+displayURL="https://www.curseforge.com/minecraft/mc-mods/jurassic-world-expansion"
+logoFile="logo.png"
+authors="Rayrindu, YeoXuHang, Trash Paint, Ktoto, Primal, Tankist"
+description='''
+A mod that adds dinosaurs to Minecraft'''
+[[dependencies.jwe]]
+    modId="forge"
+    mandatory=true
+    versionRange="[40,)"
+    ordering="NONE"
+    side="BOTH"
+[[dependencies.jwe]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.18.2,1.19)"
+    ordering="NONE"
+    side="BOTH"
