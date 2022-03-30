@@ -1,7 +1,24 @@
 {
   "variants": {
-    "": {
-      "model": "jwe:block/deepslate_amber_ore"
-    }
+    "": [
+      {
+        "model": "jwe:block/deepslate_amber/0"
+      },
+      {
+        "model": "jwe:block/deepslate_amber/1"
+      },
+      {
+        "model": "jwe:block/deepslate_amber/2"
+      },
+      {
+        "model": "jwe:block/deepslate_amber/3"
+      },
+      {
+        "model": "jwe:block/deepslate_amber/4"
+      },
+      {
+        "model": "jwe:block/deepslate_amber/5"
+      }
+    ]
   }
 }

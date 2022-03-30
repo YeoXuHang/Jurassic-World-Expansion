@@ -24,11 +24,16 @@ public class JweModBlocks {
 
     public static final RegistryObject<Block> AMBER_ORE = registerBlock("amber_ore",
             () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(5f).requiresCorrectToolForDrops(), UniformInt.of(3, 7)), JweModTab.JWE_BLOCK_TAB);
+                    .strength(5f), UniformInt.of(3, 7)), JweModTab.JWE_BLOCK_TAB);
 
     public static final RegistryObject<Block> DEEPSLATE_AMBER_ORE = registerBlock("deepslate_amber_ore",
             () -> new OreBlock(BlockBehaviour.Properties.of(Material.STONE)
-                    .strength(5f).requiresCorrectToolForDrops(), UniformInt.of(3, 7)), JweModTab.JWE_BLOCK_TAB);
+                    .strength(5f), UniformInt.of(3, 7)), JweModTab.JWE_BLOCK_TAB);
+
+    public static final RegistryObject<Block> AMBER_BLOCK = registerBlock("amber_block",
+            () -> new Block(BlockBehaviour.Properties.of(Material.METAL)
+                    .strength(9f)), JweModTab.JWE_BLOCK_TAB);
+
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {
         RegistryObject<T> toReturn = BLOCKS.register(name, block);

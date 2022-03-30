@@ -19,8 +19,12 @@ public class JweModItems {
 
     public static final RegistryObject<Item> AMBER_WITH_MOSQUITO = ITEMS.register("amber_with_mosquito",
             () -> new Item(new Item.Properties().tab(JweModTab.JWE_TAB)));
+    //Trowel
+    public static final RegistryObject<Item> TROWEL = ITEMS.register("trowel",
+            () -> new Item(new Item.Properties().tab(JweModTab.JWE_TAB)));
 
-    public static final RegistryObject<ForgeSpawnEggItem> RACCOON_SPAWN_EGG = ITEMS.register("raccoon_spawn_egg",
+    //SpawnEgg
+    public static final RegistryObject<ForgeSpawnEggItem> T_REX_SPAWN_EGG = ITEMS.register("tyrannosaurus_rex_spawn_egg",
             () -> new ForgeSpawnEggItem(JweModEntityTypes.T_REX,0x948e8d, 0x3b3635,
                     new Item.Properties().tab(JweModTab.JWE_TAB)));
 

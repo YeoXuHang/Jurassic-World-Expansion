@@ -1,0 +1,12 @@
+{
+  "replace": false,
+  "values": [
+    "jwe:amber_ore",
+    "jwe:deepslate_amber_ore",
+    //"tutorialmod:citrine_block",
+    //"tutorialmod:raw_citrine_block",
+    //"tutorialmod:deepslate_citrine_ore",
+    //"tutorialmod:netherrack_citrine_ore",
+    //"tutorialmod:endstone_citrine_ore"
+  ]
+}

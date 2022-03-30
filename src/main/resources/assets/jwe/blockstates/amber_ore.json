@@ -1,7 +1,12 @@
 {
   "variants": {
-    "": {
-      "model": "jwe:block/amber_ore"
-    }
+    "": [
+      {
+        "model": "jwe:block/amber/0"
+      },
+      {
+        "model": "jwe:block/amber/1"
+      }
+    ]
   }
 }

@@ -8,7 +8,7 @@ public class JweModTab {
     public static final CreativeModeTab JWE_TAB = new CreativeModeTab("jweitemtab") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(JweModItems.AMBER.get());
+            return new ItemStack(JweModItems.AMBER_WITH_MOSQUITO.get());
         }
     };
     public static final CreativeModeTab JWE_BLOCK_TAB = new CreativeModeTab("jweblocktab") {
