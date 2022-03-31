@@ -1,0 +1,8 @@
+{
+  "parent": "jwe:block/cycad/cycad_sapling",
+  "textures": {
+    "all": "jwe:block/cycad_sapling",
+    "particle": "jwe:block/cycad_sapling",
+    "0": "jwe:block/cycad_sapling"
+  }
+}

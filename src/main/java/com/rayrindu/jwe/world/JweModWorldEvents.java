@@ -1,7 +1,8 @@
-package com.rayrindu.jwe.world.world;
+package com.rayrindu.jwe.world;
 
 import com.rayrindu.jwe.JweMod;
-import com.rayrindu.jwe.world.world.gen.JweModOreGeneration;
+import com.rayrindu.jwe.world.gen.JweModOreGeneration;
+import com.rayrindu.jwe.world.gen.JweModTreeGeneration;
 import net.minecraftforge.event.world.BiomeLoadingEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
@@ -10,6 +11,7 @@ import net.minecraftforge.fml.common.Mod;
 public class JweModWorldEvents {
     @SubscribeEvent
     public static void biomeLoadingEvent(final BiomeLoadingEvent event) {
+        JweModTreeGeneration.generateTrees(event);
         JweModOreGeneration.generateOres(event);
     }
 }

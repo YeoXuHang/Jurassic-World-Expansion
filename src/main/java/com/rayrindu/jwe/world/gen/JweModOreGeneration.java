@@ -1,6 +1,6 @@
-package com.rayrindu.jwe.world.world.gen;
+package com.rayrindu.jwe.world.gen;
 
-import com.rayrindu.jwe.world.world.feature.JweModPlacedFeatures;
+import com.rayrindu.jwe.world.feature.JweModPlacedFeatures;
 import net.minecraft.core.Holder;
 import net.minecraft.world.level.levelgen.GenerationStep;
 import net.minecraft.world.level.levelgen.placement.PlacedFeature;

@@ -1,0 +1,150 @@
+{
+	"credit": "Made with Blockbench",
+	"ambientocclusion":true,
+	"parent": "cycad_sapling",
+	"texture_size": [64, 64],
+	"textures": {
+		"0": "jwe:block/cycad_sapling",
+		"particle": "jwe:block/cycad_sapling"
+	},
+	"elements": [
+		{
+			"name": "cycad_sapling",
+			"from": [4.5, 0, 4.5],
+			"to": [11.5, 11, 11.5],
+			"faces": {
+				"north": {"uv": [0, 0, 1.75, 2.75], "texture": "#0"},
+				"east": {"uv": [1.75, 0, 3.5, 2.75], "texture": "#0"},
+				"south": {"uv": [0, 2.75, 1.75, 5.5], "texture": "#0"},
+				"west": {"uv": [1.75, 2.75, 3.5, 5.5], "texture": "#0"},
+				"up": {"uv": [7, 9.25, 5.25, 7.5], "texture": "#0"},
+				"down": {"uv": [8.75, 7.5, 7, 9.25], "texture": "#0"}
+			}
+		},
+		{
+			"name": "cycad_sapling",
+			"from": [5.5, 11, 5.5],
+			"to": [10.5, 18, 10.5],
+			"faces": {
+				"north": {"uv": [6.75, 9.25, 8, 11], "texture": "#0"},
+				"east": {"uv": [9.5, 0, 10.75, 1.75], "texture": "#0"},
+				"south": {"uv": [9.5, 1.75, 10.75, 3.5], "texture": "#0"},
+				"west": {"uv": [1.5, 9.75, 2.75, 11.5], "texture": "#0"},
+				"up": {"uv": [4, 11, 2.75, 9.75], "texture": "#0"},
+				"down": {"uv": [5.25, 9.75, 4, 11], "texture": "#0"}
+			}
+		},
+		{
+			"name": "cycad_sapling",
+			"from": [13.9, 0.9, 5],
+			"to": [22.9, 6.9, 11],
+			"rotation": {"angle": 22.5, "axis": "z", "origin": [0, 0, 0]},
+			"faces": {
+				"north": {"uv": [2.25, 6, 4.5, 7.5], "texture": "#0"},
+				"east": {"uv": [8.75, 7.5, 10.25, 9], "texture": "#0"},
+				"south": {"uv": [4.5, 6, 6.75, 7.5], "texture": "#0"},
+				"west": {"uv": [9, 6, 10.5, 7.5], "texture": "#0"},
+				"up": {"uv": [9, 7.5, 6.75, 6], "texture": "#0"},
+				"down": {"uv": [2.25, 7, 0, 8.5], "texture": "#0"}
+			}
+		},
+		{
+			"name": "cycad_sapling",
+			"from": [4.9, 0.9, 14],
+			"to": [10.9, 6.9, 23],
+			"rotation": {"angle": -22.5, "axis": "x", "origin": [0, 0, 0]},
+			"faces": {
+				"north": {"uv": [0, 8.5, 1.5, 10], "texture": "#0"},
+				"east": {"uv": [0, 5.5, 2.25, 7], "texture": "#0"},
+				"south": {"uv": [8.75, 4.5, 10.25, 6], "texture": "#0"},
+				"west": {"uv": [5.75, 0, 8, 1.5], "texture": "#0"},
+				"up": {"uv": [7.25, 3.75, 5.75, 1.5], "texture": "#0"},
+				"down": {"uv": [7.25, 3.75, 5.75, 6], "texture": "#0"}
+			}
+		},
+		{
+			"name": "cycad_sapling",
+			"from": [4.9, 6.9, -8],
+			"to": [10.9, 12.9, 1],
+			"rotation": {"angle": 22.5, "axis": "x", "origin": [0, 0, 0]},
+			"faces": {
+				"north": {"uv": [8.75, 9, 10.25, 10.5], "texture": "#0"},
+				"east": {"uv": [7.25, 1.5, 9.5, 3], "texture": "#0"},
+				"south": {"uv": [5.25, 9.25, 6.75, 10.75], "texture": "#0"},
+				"west": {"uv": [7.25, 3, 9.5, 4.5], "texture": "#0"},
+				"up": {"uv": [3.75, 9.75, 2.25, 7.5], "texture": "#0"},
+				"down": {"uv": [5.25, 7.5, 3.75, 9.75], "texture": "#0"}
+			}
+		},
+		{
+			"name": "cycad_sapling",
+			"from": [3, 5.9, 8.3],
+			"to": [12, 11.9, 14.3],
+			"rotation": {"angle": 45, "axis": "y", "origin": [0, 0, 0]},
+			"faces": {
+				"north": {"uv": [7.25, 3, 9.5, 4.5], "texture": "#0"},
+				"east": {"uv": [8.75, 9, 10.25, 10.5], "texture": "#0"},
+				"south": {"uv": [7.25, 1.5, 9.5, 3], "texture": "#0"},
+				"west": {"uv": [5.25, 9.25, 6.75, 10.75], "texture": "#0"},
+				"up": {"uv": [3.75, 9.75, 2.25, 7.5], "rotation": 90, "texture": "#0"},
+				"down": {"uv": [5.25, 7.5, 3.75, 9.75], "rotation": 270, "texture": "#0"}
+			}
+		},
+		{
+			"name": "cycad_sapling",
+			"from": [-3, 5.9, -1],
+			"to": [3, 11.9, 8],
+			"rotation": {"angle": 45, "axis": "y", "origin": [0, 0, 0]},
+			"faces": {
+				"north": {"uv": [8.75, 9, 10.25, 10.5], "texture": "#0"},
+				"east": {"uv": [7.25, 1.5, 9.5, 3], "texture": "#0"},
+				"south": {"uv": [5.25, 9.25, 6.75, 10.75], "texture": "#0"},
+				"west": {"uv": [7.25, 3, 9.5, 4.5], "texture": "#0"},
+				"up": {"uv": [3.75, 9.75, 2.25, 7.5], "texture": "#0"},
+				"down": {"uv": [5.25, 7.5, 3.75, 9.75], "texture": "#0"}
+			}
+		},
+		{
+			"name": "cycad_sapling",
+			"from": [8.4, 5.9, 3],
+			"to": [14.4, 11.9, 12],
+			"rotation": {"angle": -45, "axis": "y", "origin": [0, 0, 0]},
+			"faces": {
+				"north": {"uv": [5.25, 9.25, 6.75, 10.75], "texture": "#0"},
+				"east": {"uv": [7.25, 3, 9.5, 4.5], "texture": "#0"},
+				"south": {"uv": [8.75, 9, 10.25, 10.5], "texture": "#0"},
+				"west": {"uv": [7.25, 1.5, 9.5, 3], "texture": "#0"},
+				"up": {"uv": [3.75, 9.75, 2.25, 7.5], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [5.25, 7.5, 3.75, 9.75], "rotation": 180, "texture": "#0"}
+			}
+		},
+		{
+			"name": "cycad_sapling",
+			"from": [-3, 5.9, 14.2],
+			"to": [3, 11.9, 23.2],
+			"rotation": {"angle": 45, "axis": "y", "origin": [0, 0, 0]},
+			"faces": {
+				"north": {"uv": [5.25, 9.25, 6.75, 10.75], "texture": "#0"},
+				"east": {"uv": [7.25, 3, 9.5, 4.5], "texture": "#0"},
+				"south": {"uv": [8.75, 9, 10.25, 10.5], "texture": "#0"},
+				"west": {"uv": [7.25, 1.5, 9.5, 3], "texture": "#0"},
+				"up": {"uv": [3.75, 9.75, 2.25, 7.5], "rotation": 180, "texture": "#0"},
+				"down": {"uv": [5.25, 7.5, 3.75, 9.75], "rotation": 180, "texture": "#0"}
+			}
+		},
+		{
+			"name": "cycad_sapling",
+			"from": [-8, 7, 5],
+			"to": [1, 13, 11],
+			"rotation": {"angle": -22.5, "axis": "z", "origin": [0, 0, 0]},
+			"faces": {
+				"north": {"uv": [3.5, 0, 5.75, 1.5], "texture": "#0"},
+				"east": {"uv": [7.25, 4.5, 8.75, 6], "texture": "#0"},
+				"south": {"uv": [3.5, 1.5, 5.75, 3], "texture": "#0"},
+				"west": {"uv": [8, 0, 9.5, 1.5], "texture": "#0"},
+				"up": {"uv": [5.75, 4.5, 3.5, 3], "texture": "#0"},
+				"down": {"uv": [5.75, 4.5, 3.5, 6], "texture": "#0"}
+			}
+		}
+	]
+}

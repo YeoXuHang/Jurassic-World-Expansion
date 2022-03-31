@@ -1,0 +1,8 @@
+{
+  "parent": "jwe:block/cycad/cycad_leaves",
+  "textures": {
+    "all": "jwe:block/cycad_leaves",
+    "particle": "jwe:block/cycad_leaves",
+    "0": "jwe:block/cycad_leaves"
+  }
+}

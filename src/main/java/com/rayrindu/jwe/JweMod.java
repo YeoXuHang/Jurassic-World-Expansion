@@ -9,6 +9,8 @@ import com.rayrindu.jwe.util.JweJigsawHelper;
 import com.rayrindu.jwe.util.JweModConfig;
 import com.rayrindu.jwe.villager.JweModPoiTypes;
 import com.rayrindu.jwe.villager.JweModProfessions;
+import net.minecraft.client.renderer.ItemBlockRenderTypes;
+import net.minecraft.client.renderer.RenderType;
 import net.minecraft.client.renderer.entity.EntityRenderers;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraftforge.common.MinecraftForge;
@@ -44,6 +46,8 @@ public class JweMod
     }
 
     private void clientSetup(final FMLClientSetupEvent event) {
+        ItemBlockRenderTypes.setRenderLayer(JweModBlocks.CYCAD_LEAVES.get(), RenderType.cutout());
+        ItemBlockRenderTypes.setRenderLayer(JweModBlocks.CYCAD_SAPLING.get(), RenderType.cutout());
 
         EntityRenderers.register(JweModEntityTypes.T_REX.get(), TyrannosaurusRexRenderer::new);
     }

@@ -1,4 +1,4 @@
-package com.rayrindu.jwe.world.world.feature;
+package com.rayrindu.jwe.world.feature;
 
 import net.minecraft.world.level.levelgen.placement.*;
 

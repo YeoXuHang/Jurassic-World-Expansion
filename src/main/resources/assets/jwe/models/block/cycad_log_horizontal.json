@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column_horizontal",
+  "textures": {
+    "end": "jwe:block/cycad_log_top",
+    "side": "jwe:block/cycad_log"
+  }
+}
