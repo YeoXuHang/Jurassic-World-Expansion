@@ -6,5 +6,7 @@
   "block.jwe.deepslate_amber_ore": "Deepslate Amber Ore",
 
   "itemGroup.jweitemtab": "Jurassic World Expansion's Items",
-  "itemGroup.jweblocktab": "Jurassic World Expansion's Blocks"
+  "itemGroup.jweblocktab": "Jurassic World Expansion's Blocks",
+
+  "entity.minecraft.villager.jwe.archaeologist": "Archaeologist "
 }

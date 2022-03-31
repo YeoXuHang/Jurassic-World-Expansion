@@ -1,0 +1,12 @@
+{
+  "parent": "block/cube",
+  "textures": {
+    "down": "jwe:block/extractor_bottom",
+    "up": "jwe:block/cultivator_top",
+    "north": "jwe:block/cultivator_front",
+    "east": "jwe:block/cultivator_side",
+    "south": "jwe:block/cultivator_side",
+    "west": "jwe:block/cultivator_side",
+    "particle": "jwe:block/cultivator_top"
+  }
+}

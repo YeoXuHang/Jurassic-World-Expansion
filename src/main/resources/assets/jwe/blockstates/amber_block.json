@@ -1,0 +1,7 @@
+{
+  "variants": {
+    "": {
+      "model": "jwe:block/amber_block"
+    }
+  }
+}
