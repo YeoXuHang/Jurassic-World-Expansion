@@ -1,8 +1,8 @@
 package com.rayrindu.jwe.event;
 
 import com.rayrindu.jwe.JweMod;
-import com.rayrindu.jwe.villager.ModPoiTypes;
-import com.rayrindu.jwe.villager.ModProfessions;
+import com.rayrindu.jwe.villager.JweModPoiTypes;
+import com.rayrindu.jwe.villager.JweModProfessions;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLCommonSetupEvent;
@@ -12,8 +12,8 @@ public class CommonEvents {
     @SubscribeEvent
     public static void commonSetup(FMLCommonSetupEvent event) {
         event.enqueueWork(() -> {
-            ModProfessions.fillTradeData();
-            ModPoiTypes.registerPOIs();
+            JweModProfessions.fillTradeData();
+            JweModPoiTypes.registerPOIs();
         });
     }
 }

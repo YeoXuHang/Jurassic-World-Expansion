@@ -10,7 +10,7 @@ import net.minecraftforge.registries.RegistryObject;
 
 import java.lang.reflect.InvocationTargetException;
 
-public class ModPoiTypes {
+public class JweModPoiTypes {
     public static final DeferredRegister<PoiType> POI_TYPES = DeferredRegister.create(ForgeRegistries.POI_TYPES, JweMod.MOD_ID);
 
     public static final RegistryObject<PoiType> ARCHAEOLOGIST_POI = POI_TYPES.register("archaeologist", () -> new PoiType("archaeologist", PoiType.getBlockStates(JweModBlocks.CULTIVATOR.get()), 1, 1));

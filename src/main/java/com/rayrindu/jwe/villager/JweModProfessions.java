@@ -15,11 +15,11 @@ import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
 
-public class ModProfessions {
+public class JweModProfessions {
     public static final DeferredRegister<VillagerProfession> PROFESSIONS = DeferredRegister.create(ForgeRegistries.PROFESSIONS, JweMod.MOD_ID);
 
     public static final RegistryObject<VillagerProfession> ARCHAEOLOGIST = PROFESSIONS.register("archaeologist",
-            () -> new VillagerProfession("archaeologist", ModPoiTypes.ARCHAEOLOGIST_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_LEATHERWORKER));
+            () -> new VillagerProfession("archaeologist", JweModPoiTypes.ARCHAEOLOGIST_POI.get(), ImmutableSet.of(), ImmutableSet.of(), SoundEvents.VILLAGER_WORK_LEATHERWORKER));
      // TRADE LISTS
     public static void fillTradeData() {
          // WOODWORKER TRADES

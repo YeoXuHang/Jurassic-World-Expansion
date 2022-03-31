@@ -6,7 +6,7 @@ import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.config.ModConfigEvent;
 
 @Mod.EventBusSubscriber
-public class ModConfig {
+public class JweModConfig {
     public static ForgeConfigSpec COMMON_CONFIG;
 
     public static final String CATEGORY_HOUSES = "houses";
