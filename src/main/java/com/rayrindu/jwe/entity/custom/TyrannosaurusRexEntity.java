@@ -5,10 +5,9 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
+import net.minecraft.util.Mth;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.AgeableMob;
-import net.minecraft.world.entity.EntityType;
-import net.minecraft.world.entity.MobSpawnType;
+import net.minecraft.world.entity.*;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
@@ -20,6 +19,9 @@ import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.state.BlockState;
+import net.minecraftforge.api.distmarker.Dist;
+import net.minecraftforge.api.distmarker.OnlyIn;
+import net.minecraftforge.common.ToolActions;
 
 import javax.annotation.Nullable;
 import java.util.Objects;
@@ -27,6 +29,16 @@ import java.util.Objects;
 public class TyrannosaurusRexEntity extends Animal {
      public TyrannosaurusRexEntity(EntityType<? extends Animal> entityType, Level level) {
         super(entityType, level);
+    }
+
+    private int attackTimer;
+
+    @Override
+    public void aiStep() {
+        super.aiStep();
+        if (this.attackTimer > 0) {
+            --this.attackTimer;
+        }
     }
 
     public static AttributeSupplier setAttributes() {
@@ -37,6 +49,37 @@ public class TyrannosaurusRexEntity extends Animal {
                 .add(Attributes.MOVEMENT_SPEED, 0.3f)
                 .add(Attributes.FOLLOW_RANGE, 100D)
                 .build();
+    }
+
+    @OnlyIn(Dist.CLIENT)
+    public int getAttackTimer() {
+        return this.attackTimer;
+    }
+
+    public boolean doHurtTarget(Entity entityIn) {
+        this.attackTimer = 10;
+        this.level.broadcastEntityEvent(this, (byte) 4);
+        float f = (float) this.getAttributeValue(Attributes.ATTACK_DAMAGE);
+        float f1 = (int) f > 0 ? f / 2.0F + (float) this.random.nextInt((int) f) : f;
+        float f2 = (float) this.getAttributeValue(Attributes.ATTACK_KNOCKBACK);
+
+        if (entityIn instanceof Player player && player.getUseItem().canPerformAction(ToolActions.SHIELD_BLOCK)) {
+            attackFling(player, f2 * 3, 2.0);
+            player.hurtMarked = true;
+        }
+
+        boolean flag = entityIn.hurt(DamageSource.mobAttack(this), f1);
+
+        if (flag) {
+            attackFling(entityIn, f2, 0.6);
+        }
+        return flag;
+    }
+
+    private void attackFling(Entity entityIn, float f2, double height) {
+        ((LivingEntity) entityIn).knockback(f2, Mth.sin(this.getYRot() * ((float) Math.PI / 180F)), -Mth.cos(this.getYRot() * ((float) Math.PI / 180F)));
+        entityIn.setDeltaMovement(entityIn.getDeltaMovement().add(0.0D, height, 0.0D));
+        this.doEnchantDamageEffects(this, entityIn);
     }
 
     protected void registerGoals() {

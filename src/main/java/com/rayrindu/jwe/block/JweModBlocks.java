@@ -1,7 +1,7 @@
 package com.rayrindu.jwe.block;
 
 import com.rayrindu.jwe.JweMod;
-import com.rayrindu.jwe.block.custom.ModFlammableRotatedPillarBlock;
+import com.rayrindu.jwe.block.custom.JweModFlammableRotatedPillarBlock;
 import com.rayrindu.jwe.item.JweModItems;
 import com.rayrindu.jwe.item.JweModTab;
 import com.rayrindu.jwe.world.feature.tree.CycadTreeGrower;
@@ -11,7 +11,6 @@ import net.minecraft.util.valueproviders.UniformInt;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
-import net.minecraft.world.item.Items;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.block.*;
 import net.minecraft.world.level.block.state.BlockBehaviour;
@@ -62,19 +61,24 @@ public class JweModBlocks {
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.CARTOGRAPHY_TABLE)
                     .strength(1f)), JweModTab.JWE_BLOCK_TAB);
 
+    //Cycad Log
     public static final RegistryObject<Block> CYCAD_LOG = registerBlock("cycad_log",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)),
+            () -> new JweModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LOG)),
             JweModTab.JWE_BLOCK_TAB);
+    //Cycad Wood
     public static final RegistryObject<Block> CYCAD_WOOD = registerBlock("cycad_wood",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)),
+            () -> new JweModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.OAK_WOOD)),
             JweModTab.JWE_BLOCK_TAB);
+    //Stripped Cycad Log
     public static final RegistryObject<Block> STRIPPED_CYCAD_LOG = registerBlock("stripped_cycad_log",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)),
+            () -> new JweModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_LOG)),
             JweModTab.JWE_BLOCK_TAB);
+    //Stripped Cycad Wood
     public static final RegistryObject<Block> STRIPPED_CYCAD_WOOD = registerBlock("stripped_cycad_wood",
-            () -> new ModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)),
+            () -> new JweModFlammableRotatedPillarBlock(BlockBehaviour.Properties.copy(Blocks.STRIPPED_OAK_WOOD)),
             JweModTab.JWE_BLOCK_TAB);
 
+    //Cycad Wood
     public static final RegistryObject<Block> CYCAD_PLANKS = registerBlock("cycad_planks",
             () -> new Block(BlockBehaviour.Properties.copy(Blocks.OAK_PLANKS)) {
                 @Override
@@ -93,6 +97,7 @@ public class JweModBlocks {
                 }
             }, JweModTab.JWE_BLOCK_TAB);
 
+    //Cycad Leaves
     public static final RegistryObject<Block> CYCAD_LEAVES = registerBlock("cycad_leaves",
             () -> new LeavesBlock(BlockBehaviour.Properties.copy(Blocks.OAK_LEAVES)) {
                 @Override
@@ -112,10 +117,9 @@ public class JweModBlocks {
             }, JweModTab.JWE_BLOCK_TAB);
 
 
+    //Cycad Sapling
     public static final RegistryObject<Block> CYCAD_SAPLING = registerBlock("cycad_sapling",
             () -> new SaplingBlock(new CycadTreeGrower(), BlockBehaviour.Properties.copy(Blocks.OAK_SAPLING)), JweModTab.JWE_BLOCK_TAB);
-
-
 
 
     private static <T extends Block> RegistryObject<T> registerBlock(String name, Supplier<T> block, CreativeModeTab tab) {

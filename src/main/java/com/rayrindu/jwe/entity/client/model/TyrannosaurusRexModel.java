@@ -13,7 +13,7 @@ import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.Mth;
 
 public class TyrannosaurusRexModel<T extends TyrannosaurusRexEntity> extends EntityModel<T> {
-	// This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
+	 //This layer location should be baked with EntityRendererProvider.Context in the entity renderer and passed into this model's constructor
 	public static final ModelLayerLocation LAYER_LOCATION = new ModelLayerLocation(new ResourceLocation(JweMod.MOD_ID, "tyrannosaurus_rex"), "main");
 	private final ModelPart root;
 	private final ModelPart t_rex;
@@ -102,6 +102,10 @@ public class TyrannosaurusRexModel<T extends TyrannosaurusRexEntity> extends Ent
 	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 		float body_degree = 0.2f;
 		float tail_angle = 0.2f;
+		int i = entity.getAttackTimer();
+		if (i <= 0) {
+			mouth.xRot = 0.0F;
+		}
 		this.body.zRot = Mth.cos(limbSwing * 0.3f) * body_degree * limbSwingAmount;
 		this.tile.yRot = Mth.cos(limbSwing * 0.3f) * tail_angle * limbSwingAmount;
 		this.tile2.yRot = Mth.cos(limbSwing * 0.3f) * tail_angle * limbSwingAmount;
@@ -112,7 +116,14 @@ public class TyrannosaurusRexModel<T extends TyrannosaurusRexEntity> extends Ent
 		this.tile2.xRot = Mth.cos(ageInTicks * 0.5f * 0.3F) * 0.5f * 0.1F * 0.25F;
 		this.body.xRot = Mth.cos(ageInTicks * 0.5f * 0.3F) * -0.5f * 0.1F * 0.25F;
 		this.mouth.xRot = (Mth.cos(ageInTicks * 0.1f) + Mth.sin(ageInTicks * 0.1f) + 0.5f) * 0.07f + (Mth.cos(limbSwing * 0.4f) + 0.6f) * limbSwingAmount / 3;
+	}
 
+	public void prepareMobModel(T entityIn, float limbSwing, float limbSwingAmount, float partialTick) {
+		int i = entityIn.getAttackTimer();
+		if (i > 0) {
+			right_leg.xRot = -0.9F + 0.9F * Mth.triangleWave((float) i - partialTick, 10.0F);
+			mouth.xRot = 0.375F - 0.375F * Mth.triangleWave((float) i - partialTick, 10.0F);
+		}
 	}
 
 	@Override

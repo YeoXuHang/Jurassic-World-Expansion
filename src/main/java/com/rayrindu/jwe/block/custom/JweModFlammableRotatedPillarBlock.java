@@ -14,8 +14,8 @@ import net.minecraftforge.common.ToolAction;
 
 import javax.annotation.Nullable;
 
-public class ModFlammableRotatedPillarBlock extends RotatedPillarBlock {
-    public ModFlammableRotatedPillarBlock(Properties properties) {
+public class JweModFlammableRotatedPillarBlock extends RotatedPillarBlock {
+    public JweModFlammableRotatedPillarBlock(Properties properties) {
         super(properties);
     }
 

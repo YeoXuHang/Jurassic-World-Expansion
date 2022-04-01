@@ -22,14 +22,19 @@ public class JweModConfig {
         ForgeConfigSpec.Builder COMMON_BUILDER = new ForgeConfigSpec.Builder();
 
         COMMON_BUILDER.comment("House generation settings").push(CATEGORY_HOUSES);
+        //Plains
         GENERATE_PLAINS_HOUSES = COMMON_BUILDER.comment("Should Jwe houses generate in plains biome villages?")
                 .define("generatePlainsHouses", true);
+        //Taiga
         GENERATE_TAIGA_HOUSES = COMMON_BUILDER.comment("Should Jwe Villagers houses generate in taiga biome villages?")
                 .define("generateTaigaHouses", true);
+        //Savanna
         GENERATE_SAVANNA_HOUSES = COMMON_BUILDER.comment("Should Jwe Villagers houses generate in savanna biome villages?")
                 .define("generateSavannaHouses", true);
+        //Snowy
         GENERATE_SNOWY_HOUSES = COMMON_BUILDER.comment("Should Jwe houses generate in snowy biome villages?")
                 .define("generateSnowyHouses", true);
+        //Desert
         GENERATE_DESERT_HOUSES = COMMON_BUILDER.comment("Should Jwe Villagers houses generate in desert biome villages?")
                 .define("generateDesertHouses", true);
 

@@ -16,7 +16,7 @@ public class JweModEntityTypes {
 
     public static final RegistryObject<EntityType<TyrannosaurusRexEntity>> T_REX = ENTITY_TYPES.register("tyrannosaurus_rex",
             () -> EntityType.Builder.of(TyrannosaurusRexEntity::new, MobCategory.CREATURE)
-                    .sized(0.8f, 0.6f)
+                    .sized(10f, 5f)
                     .build(new ResourceLocation(JweMod.MOD_ID, "tyrannosaurus_rex").toString()));
 
     public static void register(IEventBus eventBus) {

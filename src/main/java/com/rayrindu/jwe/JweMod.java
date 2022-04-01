@@ -26,12 +26,14 @@ import org.slf4j.Logger;
 @Mod(JweMod.MOD_ID)
 public class JweMod
 {
+    //Mod Id
     public static final String MOD_ID = "jwe";
-    // Directly reference a slf4j logger
+    //Logger
     private static final Logger LOGGER = LogUtils.getLogger();
 
     public JweMod()
     {
+        //Register
         IEventBus eventBus = FMLJavaModLoadingContext.get().getModEventBus();
         JweModItems.register(eventBus);
         JweModBlocks.register(eventBus);
@@ -39,42 +41,44 @@ public class JweMod
         JweModProfessions.PROFESSIONS.register(eventBus);
         JweModPoiTypes.POI_TYPES.register(eventBus);
 
+        //ClientSetup
         eventBus.addListener(this::clientSetup);
 
-        // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
     }
 
     private void clientSetup(final FMLClientSetupEvent event) {
+        //Renderer for Cycad
         ItemBlockRenderTypes.setRenderLayer(JweModBlocks.CYCAD_LEAVES.get(), RenderType.cutout());
         ItemBlockRenderTypes.setRenderLayer(JweModBlocks.CYCAD_SAPLING.get(), RenderType.cutout());
 
+        //Renderer for T-rex
         EntityRenderers.register(JweModEntityTypes.T_REX.get(), TyrannosaurusRexRenderer::new);
     }
 
     @SubscribeEvent
     public void onServerAboutToStartEvent(ServerAboutToStartEvent event) {
-        // PLAINS VILLAGE HOUSES
+        // Plains
         if (JweModConfig.GENERATE_PLAINS_HOUSES.get()) {
             JweJigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/plains/houses"),
                     new ResourceLocation("jwe:village/plains/plains_archaeolist"), JweModConfig.ARCHAEOLOGIST_HOUSE_WEIGHT.get());
         }
-        // TAIGA VILLAGE HOUSES
+        // Taiga
         if (JweModConfig.GENERATE_TAIGA_HOUSES.get()) {
             JweJigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/taiga/houses"),
                     new ResourceLocation("jwe:village/taiga/taiga_archaeolist"), JweModConfig.ARCHAEOLOGIST_HOUSE_WEIGHT.get());
         }
-        // SAVANNA VILLAGE HOUSES
+        // Savanna
         if (JweModConfig.GENERATE_SAVANNA_HOUSES.get()) {
             JweJigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/savanna/houses"),
                     new ResourceLocation("jwe:village/savanna/savanna_archaeolist"), JweModConfig.ARCHAEOLOGIST_HOUSE_WEIGHT.get());
         }
-        // SNOWY VILLAGE HOUSES
+        // Snowy
         if (JweModConfig.GENERATE_SNOWY_HOUSES.get()) {
             JweJigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/snowy/houses"),
                     new ResourceLocation("jwe:village/snowy/snowy_archaeolist"), JweModConfig.ARCHAEOLOGIST_HOUSE_WEIGHT.get());
         }
-        // DESERT VILLAGE HOUSES
+        // Desert
         if (JweModConfig.GENERATE_DESERT_HOUSES.get()) {
             JweJigsawHelper.registerJigsaw(event.getServer(), new ResourceLocation("minecraft:village/desert/houses"),
                     new ResourceLocation("jwe:village/desert/desert_archaeolist"), JweModConfig.ARCHAEOLOGIST_HOUSE_WEIGHT.get());

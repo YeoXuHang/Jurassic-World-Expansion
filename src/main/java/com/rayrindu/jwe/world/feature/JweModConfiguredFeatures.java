@@ -12,6 +12,7 @@ import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.WeightedPlacedFeature;
 import net.minecraft.world.level.levelgen.feature.configurations.*;
 import net.minecraft.world.level.levelgen.feature.featuresize.TwoLayersFeatureSize;
+import net.minecraft.world.level.levelgen.feature.foliageplacers.AcaciaFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.PineFoliagePlacer;
 import net.minecraft.world.level.levelgen.feature.stateproviders.BlockStateProvider;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.StraightTrunkPlacer;
@@ -25,7 +26,7 @@ public class JweModConfiguredFeatures {
                     BlockStateProvider.simple(JweModBlocks.CYCAD_LOG.get()),
                     new StraightTrunkPlacer(2, 6, 1),
                     BlockStateProvider.simple(JweModBlocks.CYCAD_LEAVES.get()),
-                    new PineFoliagePlacer(ConstantInt.of(1), ConstantInt.of(1), UniformInt.of(0, 1)),
+                    new AcaciaFoliagePlacer(ConstantInt.of(1), ConstantInt.of(0)),
                     new TwoLayersFeatureSize(1, 1, 1)).build());
 
     public static final Holder<PlacedFeature> CYCAD_CHECKED = PlacementUtils.register("cycad_checked", CYCAD_TREE,
