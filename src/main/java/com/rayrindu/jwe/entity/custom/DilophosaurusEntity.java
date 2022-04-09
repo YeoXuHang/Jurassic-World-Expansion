@@ -5,7 +5,9 @@ import net.minecraft.server.level.ServerLevel;
 import net.minecraft.sounds.SoundEvent;
 import net.minecraft.sounds.SoundEvents;
 import net.minecraft.world.damagesource.DamageSource;
-import net.minecraft.world.entity.*;
+import net.minecraft.world.entity.AgeableMob;
+import net.minecraft.world.entity.EntityType;
+import net.minecraft.world.entity.MobSpawnType;
 import net.minecraft.world.entity.ai.attributes.AttributeSupplier;
 import net.minecraft.world.entity.ai.attributes.Attributes;
 import net.minecraft.world.entity.ai.goal.*;
@@ -20,8 +22,8 @@ import net.minecraft.world.level.Level;
 import javax.annotation.Nullable;
 import java.util.Objects;
 
-public class TyrannosaurusRexEntity extends Animal {
-     public TyrannosaurusRexEntity(EntityType<? extends Animal> entityType, Level level) {
+public class DilophosaurusEntity extends Animal {
+     public DilophosaurusEntity(EntityType<? extends Animal> entityType, Level level) {
         super(entityType, level);
     }
 
@@ -48,7 +50,7 @@ public class TyrannosaurusRexEntity extends Animal {
     @Nullable
     @Override
     public AgeableMob getBreedOffspring(ServerLevel serverWorld, AgeableMob ageable) {
-        TyrannosaurusRexEntity retval = JweModEntityTypes.T_REX.get().create(serverWorld);
+        DilophosaurusEntity retval = JweModEntityTypes.DILOPHOSAURUS.get().create(serverWorld);
         retval.finalizeSpawn(serverWorld, serverWorld.getCurrentDifficultyAt(retval.blockPosition()), MobSpawnType.BREEDING, null, null);
         return retval;
     }

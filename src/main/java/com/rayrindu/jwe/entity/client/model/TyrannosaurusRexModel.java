@@ -102,10 +102,7 @@ public class TyrannosaurusRexModel<T extends TyrannosaurusRexEntity> extends Ent
 	public void setupAnim(T entity, float limbSwing, float limbSwingAmount, float ageInTicks, float netHeadYaw, float headPitch) {
 		float body_degree = 0.2f;
 		float tail_angle = 0.2f;
-		int i = entity.getAttackTimer();
-		if (i <= 0) {
-			mouth.xRot = 0.0F;
-		}
+
 		this.body.zRot = Mth.cos(limbSwing * 0.3f) * body_degree * limbSwingAmount;
 		this.tile.yRot = Mth.cos(limbSwing * 0.3f) * tail_angle * limbSwingAmount;
 		this.tile2.yRot = Mth.cos(limbSwing * 0.3f) * tail_angle * limbSwingAmount;
@@ -119,11 +116,6 @@ public class TyrannosaurusRexModel<T extends TyrannosaurusRexEntity> extends Ent
 	}
 
 	public void prepareMobModel(T entityIn, float limbSwing, float limbSwingAmount, float partialTick) {
-		int i = entityIn.getAttackTimer();
-		if (i > 0) {
-			right_leg.xRot = -0.9F + 0.9F * Mth.triangleWave((float) i - partialTick, 10.0F);
-			mouth.xRot = 0.375F - 0.375F * Mth.triangleWave((float) i - partialTick, 10.0F);
-		}
 	}
 
 	@Override

@@ -1,6 +1,7 @@
 package com.rayrindu.jwe.entity;
 
 import com.rayrindu.jwe.JweMod;
+import com.rayrindu.jwe.entity.custom.DilophosaurusEntity;
 import com.rayrindu.jwe.entity.custom.TyrannosaurusRexEntity;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.entity.EntityType;
@@ -16,8 +17,13 @@ public class JweModEntityTypes {
 
     public static final RegistryObject<EntityType<TyrannosaurusRexEntity>> T_REX = ENTITY_TYPES.register("tyrannosaurus_rex",
             () -> EntityType.Builder.of(TyrannosaurusRexEntity::new, MobCategory.CREATURE)
-                    .sized(10f, 5f)
+                    .sized(3f, 5f)
                     .build(new ResourceLocation(JweMod.MOD_ID, "tyrannosaurus_rex").toString()));
+
+    public static final RegistryObject<EntityType<DilophosaurusEntity>> DILOPHOSAURUS = ENTITY_TYPES.register("dilophosaurus",
+            () -> EntityType.Builder.of(DilophosaurusEntity::new, MobCategory.CREATURE)
+                    .sized(1.5f, 1.2f)
+                    .build(new ResourceLocation(JweMod.MOD_ID, "dilophosaurus").toString()));
 
     public static void register(IEventBus eventBus) {
         ENTITY_TYPES.register(eventBus);

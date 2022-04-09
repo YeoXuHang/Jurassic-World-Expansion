@@ -28,6 +28,11 @@ public class JweModItems {
             () -> new ForgeSpawnEggItem(JweModEntityTypes.T_REX,0x948e8d, 0x3b3635,
                     new Item.Properties().tab(JweModTab.JWE_TAB)));
 
+    //SpawnEgg
+    public static final RegistryObject<ForgeSpawnEggItem> DILOPHOSAURUS_SPAWN_EGG = ITEMS.register("dilophosaurus_spawn_egg",
+            () -> new ForgeSpawnEggItem(JweModEntityTypes.DILOPHOSAURUS,0x948e8d, 0x3b3635,
+                    new Item.Properties().tab(JweModTab.JWE_TAB)));
+
     public static void register(IEventBus eventBus) {
         ITEMS.register(eventBus);
     }

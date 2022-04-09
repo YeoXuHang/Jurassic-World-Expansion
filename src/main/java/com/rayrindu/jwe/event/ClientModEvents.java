@@ -1,6 +1,7 @@
 package com.rayrindu.jwe.event;
 
 import com.rayrindu.jwe.JweMod;
+import com.rayrindu.jwe.entity.client.model.DilophosaurusModel;
 import com.rayrindu.jwe.entity.client.model.TyrannosaurusRexModel;
 import net.minecraftforge.api.distmarker.Dist;
 import net.minecraftforge.client.event.EntityRenderersEvent;
@@ -14,5 +15,6 @@ public final class ClientModEvents {
     @SubscribeEvent
     public static void registerLayers(EntityRenderersEvent.RegisterLayerDefinitions event) {
         event.registerLayerDefinition(TyrannosaurusRexModel.LAYER_LOCATION, TyrannosaurusRexModel::createBodyLayer);
+        event.registerLayerDefinition(DilophosaurusModel.LAYER_LOCATION, DilophosaurusModel::createBodyLayer);
     }
 }

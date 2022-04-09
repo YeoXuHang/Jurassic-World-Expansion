@@ -3,6 +3,7 @@ package com.rayrindu.jwe;
 import com.mojang.logging.LogUtils;
 import com.rayrindu.jwe.block.JweModBlocks;
 import com.rayrindu.jwe.entity.JweModEntityTypes;
+import com.rayrindu.jwe.entity.client.renderer.DilophosaurusRenderer;
 import com.rayrindu.jwe.entity.client.renderer.TyrannosaurusRexRenderer;
 import com.rayrindu.jwe.item.JweModItems;
 import com.rayrindu.jwe.util.JweJigsawHelper;
@@ -54,6 +55,7 @@ public class JweMod
 
         //Renderer for T-rex
         EntityRenderers.register(JweModEntityTypes.T_REX.get(), TyrannosaurusRexRenderer::new);
+        EntityRenderers.register(JweModEntityTypes.DILOPHOSAURUS.get(), DilophosaurusRenderer::new);
     }
 
     @SubscribeEvent
